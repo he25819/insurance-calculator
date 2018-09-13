@@ -1,0 +1,70 @@
+
+.form-group-l {
+  margin-bottom: 3rem;
+}
+
+.submit-margin{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  display:flex;
+  align-items: center;/*垂直居中*/
+  justify-content: center;/*水平居中*/
+}
+
+.bt-lg{
+  padding: 0.5rem 5rem;
+}
+
+.inline {
+  display: inline-block;
+  width: 5rem;
+}
+
+.inline-s {
+  display: inline-block;
+  width: 2.2rem !important;
+}/*age*/
+
+.inline-m {
+  display: inline-block;
+  width: 4.5rem!important;
+}/*year/month*/
+
+.form-group span{
+  margin-right: 3px;
+}
+
+.material-icons.md-12 {
+  font-size: 0.9em;
+  color: rgba(0, 0, 0, 0.54);
+}/*问号 icon*/
+
+.material-icons.md-16 {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.54);
+  margin-right: 2px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  webkit-transition: all 0.1s;
+}
+
+.material-icons.md-16:hover{
+  color: rgba(0, 0, 0, 0.8);
+}/*减号 icon*/
+
+
+/*
+by Herman
+*/
+.hide {
+  display: none;
+}
+
+.container {
+    margin-bottom: 100px;
+}

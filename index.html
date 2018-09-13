@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Test Page</title>
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="css/normal.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/normal.js"></script>
+
+</head>
+
+<body>
+<!--
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Test</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
+            aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor03">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+-->
+
+<div class="container">
+    <!--introduction-->
+    <div class="page-header" id="banner">
+        <div class="row">
+            <div class="col-lg-8 col-md-7 col-6">
+                <h1>保险与定期理财比较器</h1>
+                <p class="lead">Save you more money (bata v1.0)</p>
+                <p></p>
+            </div>
+        </div>
+    </div>
+
+    <!--set birthday-->
+    <div class="form-group">
+        <label class="col-form-label">生日</label>
+        <div class="row">
+            <div class="input-group col-md-2 ">
+                <input class="form-control" type="text" placeholder="年" id="birthdayYear"/>
+            </div>
+            <div class="input-group col-md-2">
+                <select class="custom-select form-control" id="birthdayMonth">
+                    <option value="0">一月</option>
+                    <option value="1">二月</option>
+                    <option value="2">三月</option>
+                    <option value="3">四月</option>
+                    <option value="4">五月</option>
+                    <option value="5">六月</option>
+                    <option value="6">七月</option>
+                    <option value="7">八月</option>
+                    <option value="8">九月</option>
+                    <option value="9">十月</option>
+                    <option value="10">十一月</option>
+                    <option value="11">十二月</option>
+                </select>
+            </div>
+            <div class="input-group col-md-2">
+                <input class="form-control" type="text" placeholder="日" id="birthdayDay" value="1"/>
+            </div>
+        </div>
+    </div>
+    <!-- set start date-->
+    <div class="form-group-l">
+        <label class="col-form-label">第一次缴费日期</label>
+        <div class="row">
+            <div class="input-group col-md-2">
+                <input class="form-control" type="text" placeholder="年" id="firstPayYear"/>
+            </div>
+            <div class="input-group col-md-2">
+                <select class="custom-select form-control" id="firstPayMonth">
+                    <option value="0">一月</option>
+                    <option value="1">二月</option>
+                    <option value="2">三月</option>
+                    <option value="3">四月</option>
+                    <option value="4">五月</option>
+                    <option value="5">六月</option>
+                    <option value="6">七月</option>
+                    <option value="7">八月</option>
+                    <option value="8">九月</option>
+                    <option value="9">十月</option>
+                    <option value="10">十一月</option>
+                    <option value="11">十二月</option>
+                </select>
+            </div>
+            <div class="input-group col-md-2">
+                <input class="form-control" type="text" placeholder="日" id="firstPayDay" value="1"/>
+            </div>
+        </div>
+    </div>
+
+    <!-- set products-->
+    <div class="row">
+        <div class="col-lg-5" id="casea">
+            <legend>少儿保险</legend>
+            <!--choose a product-->
+            <!--
+    <div class="form-group">
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-primary active">
+                <input type="radio" name="options" autocomplete="off" checked=""> 少儿保险
+            </label>
+            <label class="btn btn-primary">
+                <input type="radio" name="options" autocomplete="off"> 自定义
+            </label>
+            <label class="btn btn-primary">
+                <input type="radio" name="options" autocomplete="off"> 银行定期
+            </label>
+        </div>
+    </div>
+            -->
+            <div class="card border-primary">
+                <div class="card-header">少儿保险</div>
+                <div class="card-body">
+                    <!-- payment amount-->
+                    <div class="form-group-l">
+                        <label class="control-label">缴费方式</label>
+                        <div class="form-group">
+                            <div class="input-group mb-3">
+                                <select class="custom-select data-isPayEveryMonth" aria-label="">
+                                    <option value="0">每年</option>
+                                    <option value="1">每月</option>
+                                </select>
+                                <input type="text" class="form-control form-control data-payMoney" aria-label="">
+                                <div class="input-group-append">
+                                    <span class="input-group-text form-control">元</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Payment duration-->
+                    <div class="form-group">
+                        <label class="control-label">缴费次数</label>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control data-payTotalTimes" aria-label="">
+                            <div class="input-group-append">
+                                <span class="input-group-text form-control">次</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- template start -->
+                    <div id="IncomeTemplate" class="hide">
+                        <div class="form-group income_1">
+                            <div class="form-inline">
+                                <i class="material-icons md-16 remove_income">remove_circle_outline</i>
+                                <input class="form-control inline-s data-atAge" type="text">
+                                <span>周岁时，可获得</span>
+                                <div class="input-group">
+                                    <input class="form-control data-gainMoney" type="text">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text form-control">元</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group income_2">
+                            <div class="form-inline">
+                                <i class="material-icons md-16 remove_income">remove_circle_outline</i>
+                                <input class="form-control inline-s data-ageStart" type="text" placeholder="">
+                                <span>周岁至</span>
+                                <input class="form-control inline-s data-ageEnd" type="text" placeholder="">
+                                <span>周岁，</span>
+                                <select class="custom-select form-control inline-m data-isEveryMonth">
+                                    <option value="0">每年</option>
+                                    <option value="1">每月</option>
+                                </select>
+                                <span>可获得</span>
+                                <div class="input-group">
+                                    <input class="form-control inline-s data-gainMoney" type="text" placeholder="">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text form-control">元</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group income_3">
+                            <div class="form-inline">
+                                <i class="material-icons md-16 remove_income">remove_circle_outline</i>
+                                <input class="form-control inline-s data-ageStart" type="text" placeholder="">
+                                <span>周岁起，</span>
+                                <select class="custom-select form-control inline-m data-isEveryMonth">
+                                    <option value="0">每年</option>
+                                    <option value="1">每月</option>
+                                </select>
+                                <span>可获得</span>
+                                <div class="input-group">
+                                    <input class="form-control data-gainMoney" type="text">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text form-control">元</span>
+                                    </div>
+                                </div>
+                                <span>，共</span>
+                                <input class="form-control inline-s data-totalTimes" type="text"/>
+                                <span>期。</span>
+                            </div>
+                        </div>
+                        <div class="form-group income_4">
+                            <div class="form-inline">
+                                <i class="material-icons md-16 remove_income">remove_circle_outline</i>
+                                <span>从第</span>
+                                <input class="form-control inline-s data-policyAnniversaryStart" type="text"/>
+                                <span>个保单周年日开始，</span>
+                                <select class="custom-select form-control inline-m data-isEveryMonth">
+                                    <option value="0" selected="">每年</option>
+                                    <option value="1">每月</option>
+                                </select>
+                                <span>可获得</span>
+                                <div class="input-group">
+                                    <input class="form-control data-gainMoney" type="text"/>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text form-control">元</span>
+                                    </div>
+                                </div>
+                                <span>，共</span>
+                                <input class="form-control inline-s data-totalTimes" type="text" />
+                                <span>期。</span>
+                            </div>
+                        </div>
+                        <div class="form-group income_5">
+                            <div class="form-inline">
+                                <i class="material-icons md-16 remove_income">remove_circle_outline</i>
+                                <span>从第</span>
+                                <input class="form-control inline-s data-policyAnniversaryStart" type="text" placeholder="">
+                                <span>个保单周年日起，至第</span>
+                                <input class="form-control inline-s data-policyAnniversaryEnd" type="text" placeholder="">
+                                <span>个保单周年日，</span>
+                                <select class="custom-select form-control inline-m data-isEveryMonth">
+                                    <option value="0" selected="">每年</option>
+                                    <option value="1">每月</option>
+                                </select>
+                                <span>可获得</span>
+                                <div class="input-group">
+                                    <input class="form-control inline-s data-gainMoney" type="text" />
+                                    <div class="input-group-append">
+                                        <span class="input-group-text form-control">元</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- template end -->
+
+                    <!-- set benefit-->
+                    <div id="benefit">
+                        <label class="">权益（收益）</label>
+                        <div class="tooltip">
+                            <i class="material-icons md-12">help</i>
+                            <span class="tooltiptext">因发生重疾、意外等原因向保险公司索赔的权益无法参与比较</span>
+                        </div>
+                    </div>
+
+                    <!--添加收益类型-->
+                    <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                        <button type="button" class="btn btn-primary addAIncome">添加收益类型</button>
+                        <div class="btn-group" role="group">
+                            <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle addAIncome"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                            <div class="dropdown-menu addIncomeType" aria-labelledby="btnGroupDrop1">
+                                <div class="dropdown-item" data-class="income_1">①、__周岁时获得__元</div>
+                                <div class="dropdown-item" data-class="income_2">②、__至__周岁，每年(月)获得__元</div>
+                                <div class="dropdown-item" data-class="income_3">③、__周岁起，每年(月)获得__元，共__期</div>
+                                <div class="dropdown-item" data-class="income_4">④、第__个保单周年日起，每年(月)获得__元，共__期</div>
+                                <div class="dropdown-item" data-class="income_5">⑤、第__至__个保单周年日，每年(月)获得__元</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!--CASE B-->
+        <div class="col-lg-5 offset-lg-1">
+            <legend>银行定期</legend>
+            <!--choose a product-->
+            <!--
+    <div class="form-group">
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-primary">
+                <input type="radio" name="options" autocomplete="off" checked=""> 少儿保险
+            </label>
+            <label class="btn btn-primary">
+                <input type="radio" name="options" autocomplete="off"> 自定义
+            </label>
+            <label class="btn btn-primary active">
+                <input type="radio" name="options" autocomplete="off"> 银行定期
+            </label>
+        </div>
+    </div>
+            -->
+
+            <div class="card border-primary">
+                <div class="card-header">银行定期</div>
+                <div class="card-body">
+                    <!-- Rate-->
+                    <div class="form-group">
+                        <label class="control-label">利率</label>
+                        <div class="form-group">
+                            <div class="input-group mb-3">
+                                <select class="custom-select isMonthlyInterestRate" aria-label="">
+                                    <option value="0">年利率</option>
+                                    <option value="1">月利率</option>
+                                </select>
+                                <input type="text" class="form-control interestRate" aria-label="" placeholder="4.5">
+                                <div class="input-group-append">
+                                    <span class="input-group-text form-control">%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- case B-->
+    </div> <!-- row-->
+
+    <div class="submit-margin">
+        <button type="submit" class="btn btn-primary bt-lg" id="flip">开始比较</button>
+    </div>
+
+    <table class="table table-hover tableList hide">
+        <thead>
+        <tr>
+            <th scope="col">日期</th>
+            <th scope="col">年龄</th>
+            <th scope="col">投保金额</th>
+            <th scope="col">购买保险享受到的收益（银行账户中取出等额金钱）</th>
+            <th scope="col">定期理财账户余额</th>
+            <th scope="col">上月利息</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="table-active">
+            <th>2018</th>
+            <td>21</td>
+            <td>Column content</td>
+            <td>Column content</td>
+            <td>Column content</td>
+            <td>Column content</td>
+        </tr>
+        <tr>
+            <th>2019</th>
+            <td>22</td>
+            <td>Column content</td>
+            <td>Column content</td>
+            <td>Column content</td>
+            <td>Column content</td>
+        </tr>
+        <tr class="table-active">
+            <th>2028</th>
+            <td>31</td>
+            <td>Column content</td>
+            <td>Column content</td>
+            <td>Column content</td>
+            <td>Column content</td>
+        </tr>
+        <tr>
+            <th>2029</th>
+            <td>32</td>
+            <td>Column content</td>
+            <td>Column content</td>
+            <td>Column content</td>
+            <td>Column content</td>
+        </tr>
+        </tbody>
+    </table>
+
+</div> <!-- container-->
+</body>
+
+</html>
